@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+  </head>
+  <body>
+    <div class="top-class">
+      <div class="container">
+        <div class="left-text">
+          <h1>Register Now</h1>
+          <span>While seats are available!</span>
+        </div>
+      </div>
+      <form>
+        <h2>Register Form</h2>
+        <div class="form-main">
+          <div class="name form-group">
+            <label class="uppercase-text">Full Name<span>*</span>
+            </label>
+            <input type="text" class="box-reg form-control" required>
+          </div>
+          <div class="username form-group">
+            <label class="uppercase-text">Username</label>
+            <span>*</span>
+            <input type="text" class="box-reg form-control" required>
+          </div>
+          <div class="password form-group">
+            <label class="uppercase-text">Password</label>
+            <span>*</span>
+            <input type="password" class="box-reg form-control" required>
+          </div>
+          <div class="confirm-password form-group">
+            <label class="uppercase-text">Confirm Password</label>
+            <span>*</span>
+            <input type="password" class="box-reg form-control" required>
+          </div>
+          <div class="email-address form-group">
+            <label class="uppercase-text">Email Address</label>
+            <span>*</span>
+            <input type="email" class="box-reg form-control" required>
+          </div>
+          <div class="phone-number form-group">
+            <label class="uppercase-text">Phone Number</label>
+            <span>*</span>
+            <input type="tel" class="box-reg form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="uppercase-text">Date of Birth</label>
+            <span>*</span>
+            <input type="date" class="box-reg form-control">
+          </div>
+          <div class="gender form-group">
+            <p class="uppercase-text">Gender</p>
+            <input type="radio" name="female" />
+            <label>Female</label>
+            <input type="radio" name="male" />
+            <label>Male</label>
+            <input type="radio" name="other" />
+            <label>Other</label>
+          </div>
+          <div class="hobbies form-group">
+            <p class="uppercase-text">Hobbies</p>
+            <input type="checkbox" />
+            <label>Reading</label>
+            <input type="checkbox" />
+            <label>Traveling</label>
+          </div>
+          <div class="form-group">
+            <input type="file" />
+            <label class="uppercase-text">Profile Picture</label>
+          </div>
+          <div>
+            <div class="ccountry form-group">
+              <label class="uppercase-text">Select Country</label>
+              <select name="Country" class="form-control">
+                <option>India</option>
+                <option>China</option>
+                <option>Russia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+              </select>
+            </div>
+            <div class="bio uppercase-text form-group">
+              <label>Bio</label>
+              <textarea></textarea>
+            </div>
+          </div>
+          <div class="term-cond form-group" checked>
+            <input type="checkbox" />
+            <label>Agree to Terms and Conditions</label>
+          </div>
+          <div class="button-form">
+            <button class="uppercase-text" type="submit">Submit</button>
+            <button class="uppercase-text" type="reset">Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

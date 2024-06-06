@@ -1,0 +1,338 @@
+.container {
+    width: 400px;
+    min-height: 100%;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+    url(download.jpeg) no-repeat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+    
+    .container h1 {
+    color: white;
+    }
+    
+    .uppercase-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+    
+    .top-class {
+    display: flex;
+    overflow-x: hidden;
+    }
+    .form-main {
+    margin-left: 20%;
+    margin-top: 25px;
+    }
+    .form-main-login {
+    margin-left: 200px;
+    margin-top: 25px;
+    align-content: center;
+    }
+    
+    button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    }
+    
+    h2 {
+    display: none;
+    }
+    .name label {
+    display: block;
+    }
+    .box-reg {
+    width: 230px;
+    height: 30px;
+    }
+    
+    .gender p {
+    margin: 0px;
+    font-size: 12px;
+    }
+    
+    .hobbies p {
+    margin: 0px;
+    font-size: 12px;
+    }
+    .ccountry label {
+    display: block;
+    }
+    div > span {
+    display: inline-block;
+    color: white;
+    }
+    
+    span {
+    color: red;
+    }
+    .term-cond {
+    display: block;
+    }
+    .button-form {
+    margin-top: 16px;
+    }
+    .button-form button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    }
+    .bio label {
+    display: block;
+    }
+    
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    }
+    
+    hterm-condl {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    body {
+    font-size: 16px;
+    color: #111111;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="date"],
+    input[type="time"],
+    input[type="file"],
+    textarea,
+    button,
+    input[type="password"],
+    input[type="tel"],
+    select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    box-shadow: none !important;
+    border-radius: 2px;
+    }
+    
+    form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 54%;
+    }
+    
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    .uppercase-text {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    
+    .box-reg {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    z-index: 999;
+    opacity: 0;
+    }
+    
+    input[type="file"] + label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    
+    input[type="file"] + label:hover {
+    background-color: #0056b3;
+    }
+    
+    .gender input[type="radio"] {
+    display: none;
+    }
+    
+    .gender input[type="radio"] + label {
+    background-color: #e7e7e7;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    }
+    
+    .gender input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    }
+    
+    .gender input[type="radio"] + label {
+    display: inline-block;
+    }
+    
+    .hobbies input[type="checkbox"] {
+    margin-right: 5px;
+    }
+    
+    .hobbies label {
+    margin-right: 10px;
+    }
+    
+    select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    .term-cond {
+    margin-bottom: 15px;
+    }
+    
+    .term-cond input[type="checkbox"] {
+    margin-right: 5px;
+    }
+    
+    .button-form {
+    justify-content: space-between;
+    }
+    
+    button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    button:hover {
+    background-color: #0056b3;
+    }
+    
+    button[type="reset"] {
+    background-color: #6c757d;
+    }
+    
+    button[type="reset"]:hover {
+    background-color: #5a6268;
+    }
+    
+    @media (max-width: 600px) {
+    .button-form {
+    flex-direction: column;
+    }
+    
+    button {
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    }
+    .login {
+    max-width: 400px;
+    }
+    .login .form-group {
+    width: 100%;
+    }
+    
+    .form-group {
+    display: inline-block;
+    width: 47%;
+    margin: 0 5px 15px;
+    position: relative;
+    vertical-align: text-bottom;
+    }
+    .form-group .form-control {
+    height: 44px;
+    border-radius: 5px;
+    }
+    .form-group label {
+    font-size: 12px;
+    }
+    
+    @media (max-width: 1199px) {
+    .form-main {
+    margin-left: 0px;
+    }
+    .form-group {
+    width: 46%;
+    }
+    }
+    @media (max-width: 767px) {
+    .top-class {
+    flex-wrap: wrap;
+    display: block;
+    }
+    .container {
+    height: 300px;
+    width: 100%;
+    min-height: auto;
+    }
+    form {
+    width: 93%;
+    }
+    .form-main {
+    margin: 0;
+    padding: 30px 40px;
+    }
+    .form-group {
+    width: 100%;
+    }
+    }
+    @media (max-width: 600px) {
+    .form-group {
+    width: 100%;
+    }
+    .form-main {
+    margin: 0;
+    padding: 30px 20px;
+    }
+    }
+    
