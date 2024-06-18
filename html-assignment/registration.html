@@ -15,82 +15,82 @@
           <span>While seats are available!</span>
         </div>
       </div>
-      <form>
+      <form id="regForm" onsubmit="getFormValue(event)">
         <h2>Register Form</h2>
         <div class="form-main">
           <div class="name form-group">
             <label class="uppercase-text">Full Name<span>*</span>
             </label>
-            <input type="text" class="box-reg form-control" required>
+            <input id="fullname" type="text" class="box-reg form-control" required>
           </div>
           <div class="username form-group">
             <label class="uppercase-text">Username</label>
             <span>*</span>
-            <input type="text" class="box-reg form-control" required>
+            <input id="username" type="text" class="box-reg form-control" required>
           </div>
           <div class="password form-group">
             <label class="uppercase-text">Password</label>
             <span>*</span>
-            <input type="password" class="box-reg form-control" required>
+            <input id="password" type="password" class="box-reg form-control" required>
           </div>
           <div class="confirm-password form-group">
             <label class="uppercase-text">Confirm Password</label>
             <span>*</span>
-            <input type="password" class="box-reg form-control" required>
+            <input id="conpassword" type="password" class="box-reg form-control" required>
           </div>
           <div class="email-address form-group">
             <label class="uppercase-text">Email Address</label>
             <span>*</span>
-            <input type="email" class="box-reg form-control" required>
+            <input id="email" type="email" class="box-reg form-control" required>
           </div>
           <div class="phone-number form-group">
             <label class="uppercase-text">Phone Number</label>
             <span>*</span>
-            <input type="tel" class="box-reg form-control" required>
+            <input id="tel" type="tel" class="box-reg form-control" required>
           </div>
           <div class="form-group">
             <label class="uppercase-text">Date of Birth</label>
             <span>*</span>
-            <input type="date" class="box-reg form-control">
+            <input id="dob" type="date" class="box-reg form-control">
           </div>
           <div class="gender form-group">
             <p class="uppercase-text">Gender</p>
-            <input type="radio" name="female" />
+            <input id="female" type="radio" value="female" name="female" />
             <label>Female</label>
-            <input type="radio" name="male" />
+            <input id="male" type="radio" value="male" name="male" />
             <label>Male</label>
-            <input type="radio" name="other" />
+            <input id="other" type="radio" value="other" name="other" />
             <label>Other</label>
           </div>
           <div class="hobbies form-group">
             <p class="uppercase-text">Hobbies</p>
-            <input type="checkbox" />
+            <input id="reading" type="checkbox" />
             <label>Reading</label>
-            <input type="checkbox" />
+            <input id="travelling" type="checkbox" />
             <label>Traveling</label>
           </div>
           <div class="form-group">
-            <input type="file" />
+            <input id="profile" type="file" />
             <label class="uppercase-text">Profile Picture</label>
           </div>
           <div>
             <div class="ccountry form-group">
               <label class="uppercase-text">Select Country</label>
-              <select name="Country" class="form-control">
-                <option>India</option>
-                <option>China</option>
-                <option>Russia</option>
-                <option>Iran</option>
-                <option>Iraq</option>
+              <select id="Country" name="Country" class="form-control">
+                <option value="india">India</option>
+                <option value="china">China</option>
+                <option value="russia">Russia</option>
+                <option value="iran">Iran</option>
+                <option value="iraq">Iraq</option>
               </select>
             </div>
             <div class="bio uppercase-text form-group">
               <label>Bio</label>
-              <textarea></textarea>
+              <textarea id="bio"></textarea>
             </div>
           </div>
           <div class="term-cond form-group" checked>
-            <input type="checkbox" />
+            <input id="agree" type="checkbox" />
             <label>Agree to Terms and Conditions</label>
           </div>
           <div class="button-form">
@@ -101,4 +101,5 @@
       </form>
     </div>
   </body>
+<script src="registration.js"></script>
 </html>
