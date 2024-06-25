@@ -19,7 +19,6 @@ import {
 } from '@mui/material';
 
 const Register = () => {
-  // State variables for form fields
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -246,7 +245,6 @@ const Register = () => {
                 Submit
               </Button>
               <Button type="reset" variant="outlined" onClick={() => {
-                // Reset form state
                 setFullName('');
                 setUsername('');
                 setPassword('');
