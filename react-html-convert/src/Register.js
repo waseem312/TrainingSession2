@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import cover from "../src/download.jpeg";
+import { Link } from "react-router-dom";
+
 import { 
   TextField, 
   Button, 
@@ -244,6 +246,9 @@ const Register = () => {
               <Button type="submit" variant="contained" color="primary">
                 Submit
               </Button>
+              <Link to="/login">
+                {"Already have an account? Login"}
+              </Link>
               <Button type="reset" variant="outlined" onClick={() => {
                 setFullName('');
                 setUsername('');
