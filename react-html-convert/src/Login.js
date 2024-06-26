@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import cover from "../src/download.jpeg";
+
 import {
-  Container,
   Box,
   Typography,
+  Paper,
   TextField,
   Button,
   Grid,
@@ -19,19 +21,26 @@ const Login = () => {
   };
 
   return (
-    <Container maxWidth="xs">
-      <Box
+    <Grid container >
+      <Grid
+        item
+        xs={false}
+        sm={4}
+        md={5}
         sx={{
-          marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          backgroundImage:`url(${cover})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
-      >
-        <Typography component="h1" variant="h5">
-          Login
-        </Typography>
-        <Box component="form" onSubmit={handleLogin} sx={{ mt: 3 }}>
+      />
+      <Grid item xs={12} sm={8} md={7}>
+        <Paper elevation={3} sx={{ p: 3, maxWidth: 600, height: '100vh', width: '100%' }}>
+          <Box textAlign="center" mb={3}>
+            <Typography variant="h4">Login Now</Typography>
+            <Typography variant="subtitle1">Let's the party begin</Typography>
+          </Box>
+          <Box component="form" onSubmit={handleLogin} sx={{ mt: 3 }}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -74,9 +83,10 @@ const Login = () => {
               </Link>
             </Grid>
           </Grid>
-        </Box>
-      </Box>
-    </Container>
+            </Box>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 };
 

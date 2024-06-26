@@ -26,6 +26,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [alt_email, setAltEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [dob, setDob] = useState('');
   const [gender, setGender] = useState('');
@@ -58,6 +59,7 @@ const Register = () => {
       password,
       confirmPassword,
       email,
+      alt_email,
       phone,
       dob,
       gender,
@@ -156,6 +158,18 @@ const Register = () => {
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
+                <Typography variant="subtitle2">Alternate Email Address</Typography>
+                <TextField
+                  fullWidth
+                  type="email"
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  value={alt_email}
+                  onChange={(e) => setAltEmail(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle2">Phone Number</Typography>
                 <TextField
                   fullWidth
@@ -189,7 +203,7 @@ const Register = () => {
                   </RadioGroup>
                 </FormControl>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <FormControl component="fieldset" margin="normal">
                   <FormLabel component="legend">Hobbies</FormLabel>
                   <FormControlLabel
@@ -199,6 +213,10 @@ const Register = () => {
                   <FormControlLabel
                     control={<Checkbox checked={hobbies.includes('travelling')} onChange={handleHobbiesChange} value="travelling" />}
                     label="Traveling"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked={hobbies.includes('writing')} onChange={handleHobbiesChange} value="writing" />}
+                    label="Writing"
                   />
                 </FormControl>
               </Grid>
