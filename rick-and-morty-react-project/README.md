@@ -10,7 +10,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Screenshot
 
-<img src="" />
+<img src="https://github.com/waseem312/TrainingSession2/blob/main/rick-and-morty-react-project/public/Screenshot-1.png" />
+
+<img src="https://github.com/waseem312/TrainingSession2/blob/main/rick-and-morty-react-project/public/Screenshot-2.png" />
 
 
 
