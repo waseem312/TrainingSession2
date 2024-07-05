@@ -4,7 +4,7 @@ import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 import Typography from "@mui/material/Typography";
 import UnfoldLessIcon from "@mui/icons-material/UnfoldLess";
@@ -12,30 +12,16 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 
 export default function Filters({ state, handleChange }) {
-  const font = '"Margarine", sans-serif';
   const MainHeadings = styled(Typography)(() => ({
-    fontFamily: font,
+    fontFamily: '"Margarine", sans-serif',
     textAlign: "left",
     paddingBottom: "0.5rem",
-    paddingTop: "12px",
+    paddingTop: "9px",
     marginBottom: "1rem",
     fontSize: "1.5rem",
   }));
   const [open, setOpen] = useState(true);
-  const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const visibleFilter = open || width > 899;
+  const isVisible = open || window.innerWidth > 899;
 
   return (
     <>
@@ -69,26 +55,15 @@ export default function Filters({ state, handleChange }) {
               justifyContent: "space-between",
               paddingTop:"35px"
             }}></Box>
-          {visibleFilter ? (
+          {isVisible ? (
             <>
-              <Stack spacing={2}>
-                
+            <Stack spacing={2} sx={{ borderRadius: "5px", background: "#F8F9F9", border: "1px solid #523b3b" }}>
 
-                <Box
-                  sx={{
-                    paddingTop:"30px",
-                    display: "flex",
-                    border: "2px solid grey",
-                    padding: "1rem",
-                  }}
-                >
-                  <FormControl
-                    sx={{ textAlign: "left" }}
-                    component="fieldset"
-                    variant="standard"
-                  >
-                    <FormLabel component="legend">Species</FormLabel>
-                    <FormGroup>
+                
+                <Box sx={{ display: "flex", padding: "1rem" }}>
+                <FormControl sx={{ textAlign: "left" }} component="fieldset" variant="standard">
+                  <Typography variant="subtitle1" component="legend">Species</Typography>
+                  <FormGroup>
                       {Object.keys(state.species).map((i) => {
                         return (
                           <FormControlLabel
@@ -110,7 +85,6 @@ export default function Filters({ state, handleChange }) {
                 <Box
                   sx={{
                     display: "flex",
-                    border: "2px solid grey",
                     padding: "1rem",
                   }}
                 >
@@ -142,7 +116,6 @@ export default function Filters({ state, handleChange }) {
                 <Box
                   sx={{
                     display: "flex",
-                    border: "2px solid grey",
                     padding: "1rem",
                   }}
                 >

@@ -10,12 +10,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 
-function Layout() {
+function Template() {
   const [data, setData] = useState([]);
   const [showData, setDataShown] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [collectedKey, setCollectedKeys] = useState({});
-
   const [state, setState] = useState({
     origin: {
       "Earth (C-137)": false,
@@ -73,70 +72,49 @@ function Layout() {
         statusTrue: [],
       };
       const { origin, species, gender, status } = state;
-
       for (let key in origin) {
         if (origin[key]) {
-          if (!collectedTrueKeys.originTrue.includes(key)) {
-            collectedTrueKeys.originTrue.push(key);
-          }
+          collectedTrueKeys.originTrue.push(key);
         }
       }
-
       for (let key in species) {
         if (species[key]) {
           collectedTrueKeys.speciesTrue.push(key);
         }
       }
-
       for (let key in gender) {
         if (gender[key]) {
           collectedTrueKeys.genderTrue.push(key);
         }
       }
-
       for (let key in status) {
         if (status[key]) {
           collectedTrueKeys.statusTrue.push(key);
         }
       }
-
       let { genderTrue, originTrue, speciesTrue, statusTrue } = collectedTrueKeys;
       let filteredData = [...data];
-
       if (genderTrue.length > 0) {
-        filteredData = filteredData.filter((el) =>
-          genderTrue.includes(el.gender),
-        );
+        filteredData = filteredData.filter((el) => genderTrue.includes(el.gender));
       }
-
       if (originTrue.length > 0) {
-        filteredData = filteredData.filter((el) =>
-          originTrue.includes(el.origin.name),
-        );
+        filteredData = filteredData.filter((el) => originTrue.includes(el.origin.name));
       }
-
       if (speciesTrue.length > 0) {
-        filteredData = filteredData.filter((el) =>
-          speciesTrue.includes(el.species),
-        );
+        filteredData = filteredData.filter((el) => speciesTrue.includes(el.species));
       }
-
       if (statusTrue.length > 0) {
-        filteredData = filteredData.filter((el) =>
-          statusTrue.includes(el.status),
-        );
+        filteredData = filteredData.filter((el) => statusTrue.includes(el.status));
       }
-
       setDataShown(filteredData);
       setCollectedKeys(collectedTrueKeys);
     }
-
     collectSelectedKeys();
   }, [state, data]);
 
   return (
     <Box>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box >
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -152,7 +130,7 @@ function Layout() {
               variant="h6"
               noWrap
               component="div"
-              sx={{ color: 'black', textAlign: 'center', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              sx={{ color: 'black', textAlign: 'center', flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
             >
               RICK AND MORTY SHOW
             </Typography>
@@ -180,4 +158,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default Template;

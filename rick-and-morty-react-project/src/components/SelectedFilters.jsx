@@ -5,18 +5,20 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import ClearIcon from "@mui/icons-material/Clear";
 
-export default function Tags({ selectedFilters, handleState }) {
-  const font = 'sans-serif';
-  let { genderTrue, originTrue, speciesTrue } = selectedFilters;
+export default function SelectedFilters({
+  selectedFilters,
+  handleState
+}) {
+  const { genderTrue, originTrue, speciesTrue } = selectedFilters;
 
-  const MainHeadings = styled(Typography)(() => ({
-    fontFamily: font,
+  const MainHeadings = styled(Typography)(({ theme }) => ({
+    fontFamily: '"Rubik", sans-serif',
     textAlign: "left",
     paddingBottom: "0.5rem",
-    fontSize: "1.5rem",
+    fontSize: "1.5rem"
   }));
 
-  const CustomButton = styled(Button)(() => ({
+  const CustomButton = styled(Button)(({ theme }) => ({
     background: "grey",
     padding: "0.5rem 1rem",
     marginRight: "5px",
@@ -24,50 +26,62 @@ export default function Tags({ selectedFilters, handleState }) {
     alignSelf: "flex-start",
     color: "white",
     "&:hover": {
-      backgroundColor: "#606060",
-    },
+      backgroundColor: "#606060"
+    }
   }));
 
   return (
-    <Box sx={{ margin: { md: "1.5rem 2rem", xs: "1rem" } }}>
-      <MainHeadings>Selected filters :</MainHeadings>
-      <Box sx={{
-        height: "2vh",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-      }}>
-        {originTrue?.length > 0 && originTrue.map((el, i) => (
-          <CustomButton
-            variant="contained"
-            key={i}
-            onClick={() => handleState("origin", el)}
-            endIcon={<ClearIcon />}
-          >
-            {el}
-          </CustomButton>
-        ))}
-        {genderTrue?.length > 0 && genderTrue.map((el, i) => (
-          <CustomButton
-            variant="contained"
-            key={i}
-            onClick={() => handleState("gender", el)}
-            endIcon={<ClearIcon />}
-          >
-            {el}
-          </CustomButton>
-        ))}
-        {speciesTrue?.length > 0 && speciesTrue.map((el, i) => (
-          <CustomButton
-            variant="contained"
-            key={i}
-            onClick={() => handleState("species", el)}
-            endIcon={<ClearIcon />}
-          >
-            {el}
-          </CustomButton>
-        ))}
+    <Box
+      sx={{
+        margin: {
+          md: "1.5rem 2rem",
+          xs: "1rem"
+        }
+      }}
+    >
+      <MainHeadings>Selected filters:</MainHeadings>
+      <Box
+        sx={{
+          height: "2vh",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "flex-start"
+        }}
+      >
+        {originTrue?.length > 0 &&
+          originTrue.map((el, i) => (
+            <CustomButton
+              variant="contained"
+              key={i}
+              onClick={() => handleState("origin", el)}
+              endIcon={<ClearIcon />}
+            >
+              {el}
+            </CustomButton>
+          ))}
+        {genderTrue?.length > 0 &&
+          genderTrue.map((el, i) => (
+            <CustomButton
+              variant="contained"
+              key={i}
+              onClick={() => handleState("gender", el)}
+              endIcon={<ClearIcon />}
+            >
+              {el}
+            </CustomButton>
+          ))}
+        {speciesTrue?.length > 0 &&
+          speciesTrue.map((el, i) => (
+            <CustomButton
+              variant="contained"
+              key={i}
+              onClick={() => handleState("species", el)}
+              endIcon={<ClearIcon />}
+            >
+              {el}
+            </CustomButton>
+          ))}
       </Box>
     </Box>
   );
